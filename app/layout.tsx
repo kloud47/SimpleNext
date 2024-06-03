@@ -16,7 +16,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <main className="flex flex-col">
+          <nav className="font-bold text-xl p-4 fixed flex w-screen justify-between">
+            <a href="/"><h1>LOGO</h1></a>
+            <button className="bg-[#e6e4e1] p-2 border rounded-xl hover:bg-[#bdbcbb]"><a href="/signup">Sign up</a></button>
+          </nav>
+          {children}
+        </main>
+      </body>
     </html>
   );
 }
